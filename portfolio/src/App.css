@@ -14,8 +14,23 @@
   font-size: 1.5rem !important;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
 .blue-background {
-  background-color: #1414eb
+  background-color: #1414eb;
+}
+
+.centered {
+  display: block;
+  margin: auto;
+}
+
+#chevron {
+  margin-bottom: 30px;
+  width: 100px;
 }
 
 .class {
@@ -33,11 +48,15 @@
 }
 
 .dark-background {
-  background-color: #292844 !important;
+  background-color: #1c1c38 !important;
 }
 
 .full-height-container {
   height: 100vh;
+}
+
+.full-width-container {
+  width: 100%;
 }
 
 .heading-center {
@@ -72,11 +91,15 @@
   font-family: '  ', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;  
   font-size: 1.5rem !important;
   transition: 200ms;
-  text-shadow: 0.15rem 0.0rem 0.2rem black;
 }
 
 .medium-padding {
   padding-left: 2em !important;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
 }
 
 .nav-link:hover {
@@ -102,10 +125,14 @@
 }
 
 .project {
-  border: 10px solid white;
-  border-radius: 10px;
   height: 300px;
   margin: auto;
+  overflow: hidden;
+  width: 300px;
+}
+
+.project-img {
+  height: 300px;
   width: 300px;
 }
 
@@ -131,9 +158,8 @@
 
 .show-work-button {
   background-color: transparent;
-  border: 0.45rem solid #DCDCDC;
-  border-radius: 0.4rem;
-  box-shadow: 0.15rem 0.3rem 0.3rem 0 black, 0.15rem 0.3rem 0.3rem 0 black inset;
+  border: 0.3rem solid #DCDCDC;
+  border-radius: 0.2rem;
   color: #DCDCDC;
   cursor: pointer;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -142,7 +168,6 @@
   line-height: 4rem;
   margin: auto;
   text-align: center;
-  text-shadow: 0.15rem 0.3rem 0.3rem black;
   user-select: none;
   width: 20rem;
 }
@@ -197,13 +222,13 @@
 @media screen and (min-width: 851px), (min-height: 601px) {
   div.who-am-i {
     font-size: 5rem;
-    text-shadow: 0.15rem 0.0rem 0.2rem black;
+    font-weight: 100;
   }
 }
 
 @media screen and (max-width: 850px), (max-height: 600px) {
   div.who-am-i {
     font-size: 3rem;
-    text-shadow: 0.09rem 0.0rem 0.12rem black;
+    font-weight: 100;
   }
 }

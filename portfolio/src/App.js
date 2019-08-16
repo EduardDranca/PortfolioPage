@@ -13,24 +13,29 @@ class App extends React.Component {
       canvasHeight: 0,
       canvasWidth: 0
     };
-
-    this.windowResized = this.windowResized.bind(this);
-    window.addEventListener("resize", this.windowResized);
-    window.addEventListener("load", this.windowResized);
-  }
-
-  windowResized(e) {
-    this.setState({
-      canvasHeight: this.refs.fullContainer.clientHeight,
-      canvasWidth: this.refs.fullContainer.clientWidth
-    })
   }
 
   render() {
     return (
       <div>
+        <div className="navbar">
 
-        <div id="first-container" className="right-skewed z-index-100 dark-background thin-shadow class">
+        </div>
+        <div className="dark-background full-height-container">
+          <div className="who-am-i">
+            Hi, I am Eduard Dranca and I am a programmer.
+          </div>
+          <div className="full-width-container">
+            <div className="show-work-button">
+              View my work
+            </div>
+          </div>
+          <div className="full-width-container bottom">
+            <img id="chevron" className="centered" src="./chevron.svg"></img>
+          </div>
+        </div>
+
+        {/* <div id="first-container" className="right-skewed z-index-100 dark-background thin-shadow class">
           <div ref="fullContainer" className="full-height-container left-skewed dark-background">
             <div className="who-am-i">
               Hi, I am Eduard Dranca and I am the best programmer ever.
@@ -60,9 +65,10 @@ Suntem constienti ca nu mai venim acasa
         </div>
         <div id="third-container" className="right-skewed z-index-80 thin-shadow class blue-background">
           <div className="rows-container left-skewed blue-background">
-            <div className="heading-left" >My Projects</div>
+            <div className="heading-left" >Projects</div>
             <div className="projects-container">
               <div className="project thin-shadow">
+                <img src="./wip.jpg" class="project-img"></img>
               </div>
               <div className="project thin-shadow">
 
@@ -78,7 +84,7 @@ Suntem constienti ca nu mai venim acasa
             <div className="heading-right">Contact</div>
             <div className="contact-information"></div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="navbar-container">
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="dark-background medium-font">
             <Navbar.Brand className="big-font" href="#home">HOME</Navbar.Brand>
