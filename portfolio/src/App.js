@@ -61,6 +61,16 @@ Suntem constienti ca nu mai venim acasa
         <div id="third-container" className="right-skewed z-index-80 thin-shadow class blue-background">
           <div className="rows-container left-skewed blue-background">
             <div className="heading-left" >My Projects</div>
+            <div className="projects-container">
+              <div className="project thin-shadow">
+              </div>
+              <div className="project thin-shadow">
+
+              </div>
+              <div className="project thin-shadow">
+
+              </div>
+            </div>
           </div>
         </div>
         <div id="fourth-container" className="class " style={{backgroundColor: "red"}}>
