@@ -34,6 +34,25 @@ class App extends React.Component {
             <img id="chevron" className="centered" src="./chevron.svg"></img>
           </div>
         </div>
+        <div className="full-height-container container-2">
+          {/*schimba fotografia cu un pie chart*/}
+          {/*muta toatea astea intr-un alt component care sa adauge animated si fadeInLeft la scroll*/}
+          <div className="center-container animated fadeInLeft">
+            <div className="center-container">
+              <div className="circular-container">
+                <img id="my-photo" className="centered" src="./poza_cv.png"></img>
+              </div>
+            </div>
+          </div>
+          <div className="center-container">
+            <div className="heading">
+              About Me
+            </div>
+            <div className="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
 
         {/* <div id="first-container" className="right-skewed z-index-100 dark-background thin-shadow class">
           <div ref="fullContainer" className="full-height-container left-skewed dark-background">
