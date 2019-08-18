@@ -29,8 +29,8 @@
 }
 
 .center-container {
-  text-align: center;
   padding: 100px;
+  text-align: center;
 }
 
 #chevron {
@@ -79,6 +79,12 @@
   font-size: 3rem;
 }
 
+.helper {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
 .left-skewed {
   position: relative;
   -ms-transform: skewY(-7deg);
@@ -98,8 +104,7 @@
 }
 
 #my-photo {
-  margin-top: -50px;
-  margin-left: -30px;
+  width: 300px;
 }
 
 .navbar {
@@ -110,6 +115,19 @@
 .nav-link:hover {
   color: #67b7ec !important;
   transition: 500ms;
+}
+
+.photo-container {
+  border-radius: 100%;
+  display: inline-block;
+  height: 300px;
+  left: 50%;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
 }
 
 .profile-photo {
@@ -225,9 +243,10 @@
   border-bottom: 2px dashed red;
 }
 
-@media screen and (min-width: 851px), (min-height: 601px) {
+@media screen and (min-width: 901px) {
   div.container-2 {
     grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
   }
 
   div.content {
@@ -237,15 +256,11 @@
   div.heading {
     font-size: 3rem;
   }
-
-  div.who-am-i {
-    font-size: 5rem;
-    font-weight: 100;
-  }
 }
 
-@media screen and (max-width: 850px), (max-height: 600px) {
+@media screen and (max-width: 900px) {
   div.container-2 {
+    grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
   }
 
@@ -256,45 +271,91 @@
   div.heading {
     font-size: 2rem;
   }
+}
 
+@media screen and (min-width: 851px), (min-height: 601px) {
+  div.who-am-i {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+}
+
+@media screen and (max-width: 850px), (max-height: 600px) {
   div.who-am-i {
     font-size: 3rem;
     font-weight: 100;
   }
 }
 
-.animated{
-  -webkit-animation-duration:1s;
-  animation-duration:1s;
-  -webkit-animation-fill-mode:both;
-  animation-fill-mode:both
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
 }
 
-@-webkit-keyframes fadeInLeft{
-  0%{
-      opacity:0;
-      -webkit-transform:translateX(-200px);
-      transform:translateX(-200px)}
-  100%{
-      opacity:1;
-      -webkit-transform:translateX(0);
-      transform:translateX(0)
+@-webkit-keyframes fade-in-left {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(-200px);
+      transform: translateX(-200px)
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
   }
 }
-@keyframes fadeInLeft{
-  0%{
-      opacity:0;
-      -webkit-transform:translateX(-200px);
-      -ms-transform:translateX(-200px);
-      transform:translateX(-200px)}
-  100%{
-      opacity:1;
-      -webkit-transform:translateX(0);
-      -ms-transform:translateX(0);
-      transform:translateX(0)
+
+@keyframes fade-in-left {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(-200px);
+      -ms-transform: translateX(-200px);
+      transform: translateX(-200px)
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0)
   }
 }
-.fadeInLeft{
-  -webkit-animation-name:fadeInLeft;
-  animation-name:fadeInLeft
+
+@-webkit-keyframes fade-in-right {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(200px);
+      transform: translateX(200px)
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0)
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+      transform: translateX(200px)
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0)
+  }
+}
+
+.fade-in-left {
+  -webkit-animation-name: fade-in-left;
+  animation-name: fade-in-left;
+}
+
+.fade-in-right {
+  -webkit-animation-name: fade-in-right;
+  animation-name: fade-in-right;
 }

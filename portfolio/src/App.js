@@ -13,6 +13,24 @@ class App extends React.Component {
       canvasHeight: 0,
       canvasWidth: 0
     };
+
+    window.addEventListener("scroll", (event) => {
+      var aboutMe = this.refs.aboutMe;
+      var myPhoto = this.refs.myPhoto;
+      var rectAboutMe = aboutMe.getBoundingClientRect();
+      var rectMyPhoto = myPhoto.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      
+      if (!aboutMe.classList.contains("animated") && rectAboutMe.top - 20 <= viewHeight) {
+        aboutMe.classList.add("animated");
+        aboutMe.classList.add("fade-in-right");
+      }
+
+      if (!myPhoto.classList.contains("animated") && rectMyPhoto.top - 20 <= viewHeight) {
+        myPhoto.classList.add("animated");
+        myPhoto.classList.add("fade-in-left");
+      }
+    });
   }
 
   render() {
@@ -36,20 +54,19 @@ class App extends React.Component {
         </div>
         <div className="full-height-container container-2">
           {/*schimba fotografia cu un pie chart*/}
-          {/*muta toatea astea intr-un alt component care sa adauge animated si fadeInLeft la scroll*/}
-          <div className="center-container animated fadeInLeft">
-            <div className="center-container">
-              <div className="circular-container">
-                <img id="my-photo" className="centered" src="./poza_cv.png"></img>
+          <div ref="myPhoto" className="center-container">
+            <div className="helper">
+              <div className="photo-container">
+                <img id="my-photo" src="./poza_cv.png"></img>
               </div>
             </div>
           </div>
-          <div className="center-container">
+          <div ref="aboutMe" className="center-container">
             <div className="heading">
               About Me
             </div>
             <div className="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </div>
           </div>
         </div>
