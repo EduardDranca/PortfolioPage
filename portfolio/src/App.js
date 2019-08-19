@@ -21,12 +21,12 @@ class App extends React.Component {
       var rectMyPhoto = myPhoto.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
       
-      if (!aboutMe.classList.contains("animated") && rectAboutMe.top - 20 <= viewHeight) {
+      if (!aboutMe.classList.contains("animated") && rectAboutMe.top - 40 <= viewHeight) {
         aboutMe.classList.add("animated");
         aboutMe.classList.add("fade-in-right");
       }
 
-      if (!myPhoto.classList.contains("animated") && rectMyPhoto.top - 20 <= viewHeight) {
+      if (!myPhoto.classList.contains("animated") && rectMyPhoto.top - 40 <= viewHeight) {
         myPhoto.classList.add("animated");
         myPhoto.classList.add("fade-in-left");
       }
@@ -52,7 +52,7 @@ class App extends React.Component {
             <img id="chevron" className="centered" src="./chevron.svg"></img>
           </div>
         </div>
-        <div className="full-height-container container-2">
+        <div className="full-height-container container-2cr">
           {/*schimba fotografia cu un pie chart*/}
           <div ref="myPhoto" className="center-container">
             <div className="helper">
@@ -67,6 +67,34 @@ class App extends React.Component {
             </div>
             <div className="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+
+        <div className="container-2r">
+          <div className="full-width-container center-container heading">
+            My Work
+          </div>
+          <div id="my-work" className="container-4">
+            <div class="work-container">
+              <div class="overlay">
+                Portfolio
+              </div>
+            </div>
+            <div class="work-container">
+              <div class="overlay">
+                Concerts
+              </div>
+            </div>
+            <div class="work-container">
+              <div class="overlay">
+                Mario
+              </div>
+            </div>
+            <div class="work-container">
+              <div class="overlay">
+                Skeletal Animation
+              </div>
             </div>
           </div>
         </div>
