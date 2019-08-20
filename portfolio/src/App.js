@@ -17,8 +17,13 @@ class App extends React.Component {
     window.addEventListener("scroll", (event) => {
       var aboutMe = this.refs.aboutMe;
       var myPhoto = this.refs.myPhoto;
+      var myWorkHeading = this.refs.myWorkHeading;
+      var myWork = this.refs.myWork;
+
       var rectAboutMe = aboutMe.getBoundingClientRect();
       var rectMyPhoto = myPhoto.getBoundingClientRect();
+      var rectMyWorkHeading = myWorkHeading.getBoundingClientRect();
+      var rectMyWork = myWork.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
       
       if (!aboutMe.classList.contains("animated") && rectAboutMe.top - 40 <= viewHeight) {
@@ -29,6 +34,16 @@ class App extends React.Component {
       if (!myPhoto.classList.contains("animated") && rectMyPhoto.top - 40 <= viewHeight) {
         myPhoto.classList.add("animated");
         myPhoto.classList.add("fade-in-left");
+      }
+
+      if (!myWorkHeading.classList.contains("animated") && rectMyWorkHeading.top - 40 <= viewHeight) {
+        myWorkHeading.classList.add("animated");
+        myWorkHeading.classList.add("fade-in-bottom");
+      }
+      
+      if (!myWork.classList.contains("animated") && rectMyWork.top - 40 <= viewHeight) {
+        myWork.classList.add("animated");
+        myWork.classList.add("fade-in-bottom");
       }
     });
   }
@@ -72,14 +87,15 @@ class App extends React.Component {
         </div>
 
         <div className="container-2r">
-          <div className="full-width-container center-container heading">
+          <div ref="myWorkHeading" className="full-width-container center-container heading">
             My Work
           </div>
-          <div id="my-work" className="container-4">
+          <div ref="myWork" id="my-work" className="container-4">
             <div class="work-container">
               <div class="overlay">
                 Portfolio
               </div>
+              <img class="work-image" src="./portfolio.png"></img>
             </div>
             <div class="work-container">
               <div class="overlay">
@@ -90,6 +106,7 @@ class App extends React.Component {
               <div class="overlay">
                 Mario
               </div>
+              <img class="work-image" src="./mario.jpg"></img>
             </div>
             <div class="work-container">
               <div class="overlay">
