@@ -29,8 +29,8 @@
 }
 
 .center-container {
-  padding: 100px;
-  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
 #chevron {
@@ -58,7 +58,7 @@
 
 .container-2r {
   display: grid;
-  grid-template-rows: 30% 70%;
+  grid-template-rows: auto auto;
 }
 
 .container-4 {
@@ -68,6 +68,8 @@
 }
 
 .content {
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 3rem;
   font-size: 2rem;
   font-weight: 100;
@@ -88,12 +90,7 @@
 
 .heading {
   font-size: 3rem;
-}
-
-.helper {
-  height: 100%;
-  position: relative;
-  width: 100%;
+  text-align: center;
 }
 
 .left-skewed {
@@ -112,6 +109,12 @@
 
 .medium-padding {
   padding-left: 2em !important;
+}
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #my-photo {
@@ -233,6 +236,15 @@
 
 .thin-shadow {
   box-shadow: 0.0rem 0.1rem 0.1rem black;
+}
+
+.tile {
+  box-shadow: 3px 3px 10px #DFDFDF;
+  border-radius: 10px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 800px;
 }
 
 .who-am-i {

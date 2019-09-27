@@ -67,49 +67,60 @@ class App extends React.Component {
             <img id="chevron" className="centered" src="./chevron.svg"></img>
           </div>
         </div>
-        <div className="full-height-container container-2cr">
-          {/*schimba fotografia cu un pie chart*/}
-          <div ref="myPhoto" className="center-container">
-            <div className="helper">
+        <div className="full-height-container container-2r">
+          <div className="full-height-container container-2cr">
+            <div ref="myPhoto" className="center-container middle-container">
               <div className="photo-container">
                 <img id="my-photo" src="./poza_cv.png"></img>
               </div>
             </div>
-          </div>
-          <div ref="aboutMe" className="center-container">
-            <div className="heading">
-              About Me
+            <div ref="aboutMe" className="center-container middle-container">
+              <div className="heading">
+                About Me
+              </div>
+              <div className="content">
+                Hi! My name is Eduard Dranca and I am a CS student who is passionate about web design and programming.
+              </div>
             </div>
-            <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          <div className="container-2r">
+            <div className="center-container">
+              <div className="tile">
+
+              </div>
+            </div>
+            <div className="center-container">
+              <div className="tile">
+
+              </div>
             </div>
           </div>
         </div>
 
         <div className="container-2r">
-          <div ref="myWorkHeading" className="full-width-container center-container heading">
+          <div ref="myWorkHeading" className="full-width-container heading">
             My Work
           </div>
           <div ref="myWork" id="my-work" className="container-4">
-            <div class="work-container">
-              <div class="overlay">
+            <div className="work-container">
+              <div className="overlay">
                 Portfolio
               </div>
-              <img class="work-image" src="./portfolio.png"></img>
+              <img className="work-image" src="./portfolio.png"></img>
             </div>
-            <div class="work-container">
-              <div class="overlay">
+            <div className="work-container">
+              <div className="overlay">
                 Concerts
               </div>
             </div>
-            <div class="work-container">
-              <div class="overlay">
+            <div className="work-container">
+              <div className="overlay">
                 Mario
               </div>
-              <img class="work-image" src="./mario.jpg"></img>
+              <img className="work-image" src="./mario.jpg"></img>
             </div>
-            <div class="work-container">
-              <div class="overlay">
+            <div className="work-container">
+              <div className="overlay">
                 Skeletal Animation
               </div>
             </div>
